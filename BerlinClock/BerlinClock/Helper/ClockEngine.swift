@@ -41,6 +41,13 @@ struct ClockEngine {
         return minutes/Row.minutes
     }
 
+    func getThirdLampStatus(date: Date) -> Int {
+        guard let minutes = getComponent(for: .minute, from: date).minute else {
+            return -1
+        }
+        return -1
+    }
+
     func getSingleMinutesLampIndex(date: Date) -> Int {
         guard let minutes = getComponent(for: .minute, from: date).minute else {
             return -1

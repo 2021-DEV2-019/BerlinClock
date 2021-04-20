@@ -56,4 +56,9 @@ class BerlinClockTests: XCTestCase {
         XCTAssertEqual(clockEngine.getSingleMinutesLampIndex(date: testDate.date_12_34_00), 4)
         XCTAssertEqual(clockEngine.getSingleMinutesLampIndex(date: testDate.date_12_35_00), 0)
     }
+
+    func testThirdLampStatus() throws {
+        XCTAssertEqual(clockEngine.getThirdLampStatus(date: testDate.date_12_30_00), 0)
+        XCTAssertEqual(clockEngine.getThirdLampStatus(date: testDate.date_12_15_00), 0)
+    }
 }

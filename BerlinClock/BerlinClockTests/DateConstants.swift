@@ -60,6 +60,16 @@ struct DateTestsConstants {
         return dateFormatter.date(from: "1972-04-30 12:23:00")!
     }
 
+    // MARK: - specific single minutes row third light
+
+    var date_12_15_00: Date {
+        return dateFormatter.date(from: "1972-04-30 12:15:00")!
+    }
+
+    var date_12_30_00: Date {
+        return dateFormatter.date(from: "1972-04-30 12:30:00")!
+    }
+
     // MARK: - Entire clock
     var date_16_50_06: Date {
         return dateFormatter.date(from: "1972-04-30 16:50:06")!
