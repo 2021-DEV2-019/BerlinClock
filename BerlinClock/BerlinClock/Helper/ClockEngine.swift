@@ -45,7 +45,7 @@ struct ClockEngine {
         guard let minutes = getComponent(for: .minute, from: date).minute else {
             return -1
         }
-        return -1
+        return (minutes % 3)
     }
 
     func getSingleMinutesLampIndex(date: Date) -> Int {
