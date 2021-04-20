@@ -18,6 +18,7 @@
 		800FC949262EE844008BD1F5 /* ClockEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800FC948262EE844008BD1F5 /* ClockEngine.swift */; };
 		800FC988262EEF31008BD1F5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800FC987262EEF31008BD1F5 /* Logger.swift */; };
 		800FC98E262EF1E0008BD1F5 /* DateConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800FC981262EEEFD008BD1F5 /* DateConstants.swift */; };
+		800FC997262EFE90008BD1F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800FC996262EFE90008BD1F5 /* Constants.swift */; };
 		FC99E222E78537A80C35B7D3 /* Pods_BerlinClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BF3509EAC35ED4784DF2B5 /* Pods_BerlinClock.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		800FC948262EE844008BD1F5 /* ClockEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockEngine.swift; sourceTree = "<group>"; };
 		800FC981262EEEFD008BD1F5 /* DateConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConstants.swift; sourceTree = "<group>"; };
 		800FC987262EEF31008BD1F5 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		800FC996262EFE90008BD1F5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8D14480555487485F0C93EDD /* Pods-BerlinClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BerlinClock.release.xcconfig"; path = "Target Support Files/Pods-BerlinClock/Pods-BerlinClock.release.xcconfig"; sourceTree = "<group>"; };
 		916FD4C014D26B20FF9B41BD /* Pods_BerlinClock_BerlinClockUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BerlinClock_BerlinClockUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BF3509EAC35ED4784DF2B5 /* Pods_BerlinClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BerlinClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				800FC987262EEF31008BD1F5 /* Logger.swift */,
+				800FC996262EFE90008BD1F5 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				800FC90B262ECF2F008BD1F5 /* ViewController.swift in Sources */,
+				800FC997262EFE90008BD1F5 /* Constants.swift in Sources */,
 				800FC988262EEF31008BD1F5 /* Logger.swift in Sources */,
 				800FC907262ECF2F008BD1F5 /* AppDelegate.swift in Sources */,
 				800FC949262EE844008BD1F5 /* ClockEngine.swift in Sources */,

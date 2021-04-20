@@ -20,8 +20,24 @@ class BerlinClockTests: XCTestCase {
         clockEngine = nil
     }
 
-    func testSecondLamp() throws {
-        XCTAssertEqual(clockEngine.getSecondsLampStatus(date: testDate.date_00_00_00), 1)
-        XCTAssertEqual(clockEngine.getSecondsLampStatus(date: testDate.date_23_59_59), 0)
+    func testSecondLampStatus() throws {
+        XCTAssertEqual(clockEngine.getSecondsLampStatus(date: testDate.date_00_00_00), 0)
+        XCTAssertEqual(clockEngine.getSecondsLampStatus(date: testDate.date_23_59_59), 1)
+    }
+
+    func testFiveHoursLampIndex() throws {
+        XCTAssertEqual(clockEngine.getFiveHoursLampIndex(date: testDate.date_00_00_00), 0)
+        XCTAssertEqual(clockEngine.getFiveHoursLampIndex(date: testDate.date_02_04_00), 0)
+        XCTAssertEqual(clockEngine.getFiveHoursLampIndex(date: testDate.date_08_23_00), 1)
+        XCTAssertEqual(clockEngine.getFiveHoursLampIndex(date: testDate.date_16_35_00), 3)
+        XCTAssertEqual(clockEngine.getFiveHoursLampIndex(date: testDate.date_23_59_59), 4)
+    }
+
+    func testSingleHoursLampIndex() throws {
+        XCTAssertEqual(clockEngine.getSingleHoursLampIndex(date: testDate.date_00_00_00), 0)
+        XCTAssertEqual(clockEngine.getSingleHoursLampIndex(date: testDate.date_02_04_00), 2)
+        XCTAssertEqual(clockEngine.getSingleHoursLampIndex(date: testDate.date_08_23_00), 3)
+        XCTAssertEqual(clockEngine.getSingleHoursLampIndex(date: testDate.date_23_59_59), 3)
+        XCTAssertEqual(clockEngine.getSingleHoursLampIndex(date: testDate.date_14_35_00), 4)
     }
 }
