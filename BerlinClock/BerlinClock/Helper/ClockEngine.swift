@@ -38,7 +38,7 @@ struct ClockEngine {
             return -1
         }
 
-        return -1
+        return minutes/Row.minutes
     }
 
     func getSingleMinutesLampIndex(date: Date) -> Int {
@@ -46,7 +46,7 @@ struct ClockEngine {
             return -1
         }
 
-      return -1
+      return minutes%Row.minutesRemainder
     }
 
     private func getComponent(for component: Calendar.Component, from date: Date) -> DateComponents {
