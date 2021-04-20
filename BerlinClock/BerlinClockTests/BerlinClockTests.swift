@@ -1,7 +1,7 @@
 //
 //  BerlinClockTests.swift
 //  BerlinClockTests
-//
+// Test case from http://agilekatas.co.uk/katas/BerlinClock-Kata
 //
 
 import XCTest
@@ -9,24 +9,19 @@ import XCTest
 
 class BerlinClockTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    private var clockEngine: ClockEngine!
+    private var testDate = DateTestsConstants()
+
+    override func setUp() {
+        clockEngine = ClockEngine()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown() {
+        clockEngine = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSecondLamp() throws {
+        XCTAssertEqual(clockEngine.getSecondsLampStatus(date: testDate.date_00_00_00), 1)
+        XCTAssertEqual(clockEngine.getSecondsLampStatus(date: testDate.date_23_59_59), 0)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
