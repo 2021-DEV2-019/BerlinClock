@@ -10,11 +10,11 @@ struct ClockEngine {
 
     private let calendar = Calendar.current
 
-    func getSecondsLampStatus(date: Date) -> Int {
+    func getSecondsLampStatus(date: Date) -> Bool {
         guard let seconds = getComponent(for: .second, from: date).second else {
-            return -1
+            return false
         }
-        return (seconds % 2)
+        return (seconds % 2) == 0
     }
 
     func getFiveHoursLampIndex(date: Date) -> Int {
@@ -39,13 +39,6 @@ struct ClockEngine {
         }
 
         return minutes/Row.minutes
-    }
-
-    func getThirdLampStatus(date: Date) -> Int {
-        guard let minutes = getComponent(for: .minute, from: date).minute else {
-            return -1
-        }
-        return (minutes % 3)
     }
 
     func getSingleMinutesLampIndex(date: Date) -> Int {

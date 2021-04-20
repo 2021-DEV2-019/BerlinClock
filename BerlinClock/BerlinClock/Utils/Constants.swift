@@ -15,3 +15,12 @@ struct Row {
     private init() {
     }
 }
+
+struct DateFormatting {
+
+    static let iOSDefaultDateFormat = "yyyy-MM-dd HH:mm:ss"
+    static let hourFormat = "HH:mm:ss"
+
+    private init() {
+    }
+}

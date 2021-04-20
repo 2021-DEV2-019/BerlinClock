@@ -21,8 +21,8 @@ class BerlinClockTests: XCTestCase {
     }
 
     func testSecondLampStatus() throws {
-        XCTAssertEqual(clockEngine.getSecondsLampStatus(date: testDate.date_00_00_00), 0)
-        XCTAssertEqual(clockEngine.getSecondsLampStatus(date: testDate.date_23_59_59), 1)
+        XCTAssertTrue(clockEngine.getSecondsLampStatus(date: testDate.date_00_00_00))
+        XCTAssertFalse(clockEngine.getSecondsLampStatus(date: testDate.date_23_59_59))
     }
 
     func testFiveHoursLampIndex() throws {
@@ -57,8 +57,4 @@ class BerlinClockTests: XCTestCase {
         XCTAssertEqual(clockEngine.getSingleMinutesLampIndex(date: testDate.date_12_35_00), 0)
     }
 
-    func testThirdLampStatus() throws {
-        XCTAssertEqual(clockEngine.getThirdLampStatus(date: testDate.date_12_30_00), 0)
-        XCTAssertEqual(clockEngine.getThirdLampStatus(date: testDate.date_12_15_00), 0)
-    }
 }

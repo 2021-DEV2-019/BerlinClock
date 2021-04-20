@@ -8,7 +8,6 @@ import Foundation
 
 struct DateTestsConstants {
 
-    private let iOSDefaultDateFormat = "yyyy-MM-dd HH:mm:ss"
     private var dateFormatter = DateFormatter()
 
     // MARK: - generic date
@@ -81,6 +80,6 @@ struct DateTestsConstants {
 
     // MARK: - init()
     init() {
-        dateFormatter.dateFormat = iOSDefaultDateFormat
+        dateFormatter.dateFormat = DateFormatting.iOSDefaultDateFormat
     }
 }
