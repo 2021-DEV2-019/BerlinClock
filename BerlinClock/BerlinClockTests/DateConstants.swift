@@ -80,6 +80,7 @@ struct DateTestsConstants {
 
     // MARK: - init()
     init() {
-        dateFormatter.dateFormat = DateFormatting.iOSDefaultDateFormat
+        //for any reason DateFormatting Struct isn't known here
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
     }
 }
