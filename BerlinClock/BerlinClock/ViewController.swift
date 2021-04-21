@@ -31,32 +31,9 @@ extension ViewController: ViewModelDelegate {
         secondsLampView.backgroundColor = berlinClock.secondLampStatus ? .yellow : .lightGray
         hourLabel.text = berlinClock.dateString
 
-        updateStackView(stackView: fiverHoursStackView, count: berlinClock.fiveHoursLampIndex)
-        updateStackView(stackView: singleHoursStackView, count: berlinClock.singleHoursLampIndex)
-        updateStackView(stackView: singleMinutesStackView, count: berlinClock.singleMinutesLampIndex)
-
-        for i in 0..<berlinClock.fiveMinutesLampIndex {
-            if berlinClock.fiveMinutesLampStatus(index: i) {
-                fiveMinutesStackView.subviews[i].backgroundColor = .red
-            } else {
-                fiveMinutesStackView.subviews[i].backgroundColor = .yellow
-            }
-        }
-    }
-
-    private func updateStackView(stackView: UIStackView, count: Int) {
-        guard count > 0 else {
-            resetStackView(stackView: stackView)
-            return
-        }
-        for i in 0..<count-1 {
-            stackView.subviews[i].backgroundColor = .yellow
-        }
-    }
-
-    private func resetStackView(stackView: UIStackView) {
-        for i in 0..<stackView.subviews.count-1 {
-            stackView.subviews[i].backgroundColor = .lightGray
-        }
+        fiverHoursStackView.updateStack(to: berlinClock.fiveHoursLampIndex)
+        singleHoursStackView.updateStack(to: berlinClock.singleHoursLampIndex)
+        fiveMinutesStackView.updateStack(to: berlinClock.fiveMinutesLampIndex, fiveMinutesLampStatus: true)
+        singleMinutesStackView.updateStack(to: berlinClock.singleMinutesLampIndex)
     }
 }

@@ -80,8 +80,7 @@ struct DateTestsConstants {
 
     // MARK: - init()
     init() {
-        //for any reason DateFormatting Struct isn't known here
-        
+        //for any reason DateFormatting Struct isn't known here. Even the comment is triggering my XCode.
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
     }
 }

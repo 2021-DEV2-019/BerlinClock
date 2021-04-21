@@ -20,8 +20,13 @@ struct BerlinClock {
         return dateFormat.string(from: self.date)
     }
 
-    func fiveMinutesLampStatus(index: Int) -> Bool {
-        guard index != 0 else {
+    /// Returns the status yellow/red of the five minutes lamp row through a boolean
+    ///
+    /// - Parameters:
+    ///     - index: The current index of the element
+    /// - Return: A boolean that indicates if the element is *Red* if true and *Yellow* if false
+    static func fiveMinutesLampStatus(index: Int) -> Bool {
+        guard index != 0 else {
             return false
         }
         return (index % 3) == 0
