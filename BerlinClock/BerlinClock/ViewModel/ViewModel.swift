@@ -18,7 +18,7 @@ class ViewModel {
     private var berlinClock: BerlinClock!
 
     init() {
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(tickUpdated), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: Time.defaultInterval, target: self, selector: #selector(tickUpdated), userInfo: nil, repeats: true)
     }
 
     @objc func tickUpdated() {
